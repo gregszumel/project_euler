@@ -29,6 +29,15 @@ int A[SIZE][SIZE] = {
     {4,62,98,27,23,9,70,98,73,93,38,53,60,4,23}
 };
 
+void printTriangle(int triangle[SIZE][SIZE]) {
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j <= i; j++) {
+            cout << triangle[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
 // max of two numbers
 int max(int a, int b) {
     if (a >= b) return a;
@@ -58,13 +67,8 @@ int main() {
     }
 
     // printing for debugging
+    // printTriangle(sum);
 
-    // for (int i = 0; i < SIZE; i++) {
-    //     for (int j = 0; j <= i; j++) {
-    //         cout << sum[i][j] << " ";
-    //     }
-    //     cout << endl;
-    // }
 
     cout << max(sum[SIZE-1]) << endl;
 }
